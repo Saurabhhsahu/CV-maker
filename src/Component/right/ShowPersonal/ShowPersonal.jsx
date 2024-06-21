@@ -1,26 +1,21 @@
 import React from "react";
 import './ShowPersonal.css'
 
-export default function ShowPersonal({
-    name = 'Name',
-    email = 'Email',
-    phoneNumber = 'Phone Number',
-    address = 'Address'
-}){
+export default function ShowPersonal({personalInfo}){
     return(
         <div className="showPersonal">
-            <div className="name">{name}</div>
+            <div className="name">{personalInfo.name}</div>
             <div className="other">
                 <div className="showEmail field">
-                    {email}
+                    {personalInfo.email}
                 </div>
 
                 <div className="showPhone field">
-                    {phoneNumber}
+                    {personalInfo.phoneNumber}
                 </div>
 
                 <div className="showAddress field">
-                    {address}
+                    {personalInfo.address}
                 </div>
             </div>
         </div>

@@ -2,14 +2,8 @@ import React from "react";
 import './PersonalDetail.css'
 
 export default function PersonalDetail({
-    name,
-    setName,
-    email,
-    setEmail,
-    phoneNumber,
-    setPhoneNumber,
-    address,
-    setAddress
+    personalInfo,
+    onChange
 }){
     return(
             <div className="personal">
@@ -23,11 +17,10 @@ export default function PersonalDetail({
                             <input 
                                 className="input"
                                  type="text" 
-                                value={name}
+                                value={personalInfo.name}
                                 placeholder="Full name"
-                                onChange={e => {
-                                    console.log(e.target.value);
-                                    setName(e.target.value)}}
+                                onChange={onChange}
+                                data-key="name"
                             />
                         </label>
                     </div>
@@ -39,8 +32,9 @@ export default function PersonalDetail({
                                 className="input"
                                 type="email" 
                                 placeholder="E-mail"
-                                value={email}
-                                onChange={e => setEmail(e.target.value)}
+                                value={personalInfo.email}
+                                onChange={onChange}
+                                data-key="email"
                             />
                         </label>
                     </div>
@@ -52,8 +46,9 @@ export default function PersonalDetail({
                                 className="input"
                                 type="tel" 
                                 placeholder="Phone number"
-                                value={phoneNumber}
-                                onChange={e => setPhoneNumber(e.target.value)}
+                                value={personalInfo.phoneNumber}
+                                onChange={onChange}
+                                data-key="phoneNumber"
                             />
                         </label>
                     </div>
@@ -65,8 +60,9 @@ export default function PersonalDetail({
                                 className="input"
                                 type="text" 
                                 placeholder="Address"
-                                value={address}
-                                onChange={e => setAddress(e.target.value)}
+                                value={personalInfo.address}
+                                onChange={onChange}
+                                data-key="address"
                             />
                         </label>
                     </div>

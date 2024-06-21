@@ -5,14 +5,12 @@ import Education from './Component/Left/Education/Education';
 import ShowEducation from './Component/right/ShowEducation/ShowEducation';
 import Experience from './Component/Left/Experience/Experience';
 import ShowExperience from './Component/right/ShowExperience/ShowExperience';
+import ExampleData from './Exampledata';
 import './App.css';
 
 function App() {
   // states for personal info sections
-  const [name, setName] = useState('Josephine Meyers');
-  const [email, setEmail] = useState('josephine.meyers@mail.co.uk');
-  const [phoneNumber, setPhoneNumber] = useState('+44 3245 5521 5521');
-  const [address, setAddress] = useState('London, UK');
+  const [personalInfo, setPersonalInfo] = useState(ExampleData.personalInfo)
 
   // states for education section
   const [schoolName, setSchoolName] = useState('London City University');
@@ -30,14 +28,17 @@ function App() {
   const [exLocation, setExLocation] = useState('New York City, US');
   const [description, setDescription] = useState(des);
 
+  function handlePersonalInfoChange(e) {
+    const key = e.target.getAttribute('data-key');
+    setPersonalInfo({ ...personalInfo, [key]: e.target.value });
+  }
+
   return (
     <div className="app">
       <div className='Left'>
         <PersonalDetail
-          name={name} setName={setName} 
-          email={email} setEmail={setEmail} 
-          phoneNumber={phoneNumber} setPhoneNumber={setPhoneNumber}
-          address={address} setAddress={setAddress}
+          personalInfo={personalInfo}
+          onChange={handlePersonalInfoChange}
         />
 
         <Education
@@ -60,7 +61,7 @@ function App() {
 
       <div className="right">
         <ShowPersonal
-          name={name} email={email} phoneNumber={phoneNumber} address={address}
+          personalInfo={personalInfo}
         />
         <ShowEducation
           schoolName={schoolName} degree={degree} startDate={edStartDate} endDate={edEndDate} location={edLocation} 

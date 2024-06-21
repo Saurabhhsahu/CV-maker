@@ -95,15 +95,41 @@ export default function Education({
         setToggleButton(!toggleButton);
     }
 
+    const up = () =>{
+        return (
+            <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                width="35" 
+                height="35"
+            >
+                <path d="M7.41 16.59L12 12.41l4.59 4.59L18 15.17l-6-6-6 6z"/>
+            </svg>
+        )
+    }
+
+    const down = () => {
+        return(
+            <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                width="35" 
+                height="35"
+            >
+                <path d="M7.41 8.41L12 12.59l4.59-4.59L18 9.83l-6 6-6-6z"/>
+            </svg>
+        )
+    }
+
     return(
         <div className="education">
             <div className="toggle">
                 <h2>Education</h2>
                 <button
                     onClick={content}
-
+                    style={{backgroundColor:'white',border:'none'}}
                 >
-                    {toggleButton ? 'up' : 'down'}
+                    {toggleButton ? up(): down()}
                 </button>
             </div>
             {toggleButton && toggle()}
