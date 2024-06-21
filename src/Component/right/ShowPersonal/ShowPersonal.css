@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.showPersonal{
+    background-color: #29526c;
+    padding: 20px;
+}
+
+.name{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.other{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    gap: 20px;
+}
+
+.field{
+    /* width: 30%; */
+}

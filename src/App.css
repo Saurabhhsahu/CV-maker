@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.app{
+    background-color: #f3f4f6;
+    /* width: 100vw; */
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Left{
+    width: 35vw;
+}
+
+.right{
+    width: 65vw;
+    min-height: 100vh;
+    background-color: white;
+    margin-left: 25px;
+}

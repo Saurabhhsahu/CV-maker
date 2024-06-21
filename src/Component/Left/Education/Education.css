@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.education{
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.toggle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.educationMore{
+    border: none;
+    border-radius: 10px;
+    margin: 20px auto 0px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
