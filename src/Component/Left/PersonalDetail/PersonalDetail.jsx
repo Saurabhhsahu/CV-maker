@@ -1,5 +1,6 @@
 import React from "react";
 import './PersonalDetail.css'
+import InputGroup from "../../InputGroup";
 
 export default function PersonalDetail({
     personalInfo,
@@ -11,61 +12,21 @@ export default function PersonalDetail({
                 <form 
                 action=""
                 >
-                    <div className="inputDiv">
-                        <label>
-                            <div className="inputLabel">Full name</div>
-                            <input 
-                                className="input"
-                                 type="text" 
-                                value={personalInfo.name}
-                                placeholder="Full name"
-                                onChange={onChange}
-                                data-key="name"
-                            />
-                        </label>
-                    </div>
+                    <InputGroup
+                    label='Full name' type='text' value={personalInfo.name} placeholder='Full name' onChange={onChange} dataKey='name'
+                    />
 
-                    <div className="inputDiv">
-                        <label>
-                            <div className="inputLabel">E-mail</div> 
-                            <input 
-                                className="input"
-                                type="email" 
-                                placeholder="E-mail"
-                                value={personalInfo.email}
-                                onChange={onChange}
-                                data-key="email"
-                            />
-                        </label>
-                    </div>
+                    <InputGroup
+                    label='E-mail' type='email' value={personalInfo.email} placeholder='E-mail' onChange={onChange} dataKey='email'
+                    />
 
-                    <div className="inputDiv">
-                        <label>
-                            <div className="inputLabel">Phone number</div>
-                            <input 
-                                className="input"
-                                type="tel" 
-                                placeholder="Phone number"
-                                value={personalInfo.phoneNumber}
-                                onChange={onChange}
-                                data-key="phoneNumber"
-                            />
-                        </label>
-                    </div>
+                    <InputGroup
+                    label='Phone number' type='tel' value={personalInfo.phoneNumber} placeholder='Phone number' onChange={onChange} dataKey='phoneNumber'
+                    />
 
-                    <div className="inputDiv">
-                        <label>
-                            <div className="inputLabel">Address</div>
-                            <input 
-                                className="input"
-                                type="text" 
-                                placeholder="Address"
-                                value={personalInfo.address}
-                                onChange={onChange}
-                                data-key="address"
-                            />
-                        </label>
-                    </div>
+                    <InputGroup
+                    label='Address' type='text' value={personalInfo.address} placeholder='Address' onChange={onChange} dataKey='address'
+                    />
                 </form>
             </div>
     )
